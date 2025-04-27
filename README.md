@@ -49,31 +49,30 @@ A comprehensive booking and management system for car boot sales designed to sim
    - Create a `.env` file in the root directory
    - Add the following environment variables:
      ```
+      # Server Configuration
+      PORT=5000
+      NODE_ENV=development
 
-# Server Configuration
-PORT=5000
-NODE_ENV=development
+      # Database
+      DB_HOST=localhost
+      DB_USER=root
+      DB_PASS=
+      DB_NAME=carboot_db
 
-# Database
-DB_HOST=localhost
-DB_USER=root
-DB_PASS=
-DB_NAME=carboot_db
+      # JWT Authentication
+      JWT_SECRET=carboot_secret_key_change_in_production
 
-# JWT Authentication
-JWT_SECRET=carboot_secret_key_change_in_production
+      # Email Configuration
+      EMAIL_USER=your_email@gmail.com
+      EMAIL_PASS=your_email_app_password
 
-# Email Configuration
-EMAIL_USER=your_email@gmail.com
-EMAIL_PASS=your_email_app_password
-
-# Billplz Payment Gateway
-BILLPLZ_API_KEY=your_billplz_api_key
-BILLPLZ_COLLECTION_ID=your_billplz_collection_id
-BILLPLZ_X_SIGNATURE_KEY=your_billplz_signature_key
-BILLPLZ_CALLBACK_URL=http://localhost:5000/api/payments/webhook
-BILLPLZ_REDIRECT_URL=http://localhost:3000/payment/status 
-
+      # Billplz Payment Gateway
+      BILLPLZ_API_KEY=your_billplz_api_key
+      BILLPLZ_COLLECTION_ID=your_billplz_collection_id
+      BILLPLZ_X_SIGNATURE_KEY=your_billplz_signature_key
+      BILLPLZ_CALLBACK_URL=http://localhost:5000/api/payments/webhook
+      BILLPLZ_REDIRECT_URL=http://localhost:3000/payment/status 
+      ```
 5. **Start the Application**
    - For development (runs both backend and frontend):
      ```
